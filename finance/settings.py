@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     # LOCAL
+    "accounts.apps.AccountsConfig",
     # 3RD PARTY
     "rest_framework",
     "corsheaders",
@@ -80,14 +81,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "finance.wsgi.application"
-
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 SITE_ID = 1
 
-WSGI_APPLICATION = "bookroom.wsgi.application"
-
+WSGI_APPLICATION = "finance.wsgi.application"
 
 
 # Database
@@ -143,6 +141,8 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
