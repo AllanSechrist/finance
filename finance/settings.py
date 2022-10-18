@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     # LOCAL
     "accounts.apps.AccountsConfig",
+    "ledger.apps.LedgerConfig",
+    "entry.apps.EntryConfig",
     # 3RD PARTY
     "rest_framework",
     "corsheaders",
