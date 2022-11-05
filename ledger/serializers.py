@@ -10,5 +10,6 @@ class LedgerSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "title",
+            "total",
             "user",
         )
